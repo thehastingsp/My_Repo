@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senior Care Navigator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>Senior Care Navigator</h1>
+    <p class="subtitle">Find the right care for you or your loved one</p>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Care Level Info Section -->
+    <section class="care-levels" aria-label="Care levels overview">
+      <h2>Levels of Care Beyond Independent Living</h2>
+      <div class="care-cards">
+        <div class="care-card">
+          <h3>Assisted Living</h3>
+          <p>Help with daily activities like bathing, dressing, and medication management in a home-like setting.</p>
+        </div>
+        <div class="care-card">
+          <h3>Memory Care</h3>
+          <p>Specialized support for individuals living with Alzheimer's disease or other forms of dementia.</p>
+        </div>
+        <div class="care-card">
+          <h3>Skilled Nursing</h3>
+          <p>Around-the-clock medical care provided by licensed nurses for complex health needs.</p>
+        </div>
+        <div class="care-card">
+          <h3>Continuing Care Retirement Communities</h3>
+          <p>Campus-style communities offering multiple levels of care as your needs change over time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Controls -->
+    <section class="filter-section" aria-label="Filter care facilities">
+      <h2>Browse Care Facilities</h2>
+      <div class="filter-controls">
+        <div class="toggle-group" role="radiogroup" aria-label="Filter by organization type">
+          <button
+            class="toggle-btn active"
+            data-filter="all"
+            role="radio"
+            aria-checked="true"
+          >
+            Show All
+          </button>
+          <button
+            class="toggle-btn"
+            data-filter="non-profit"
+            role="radio"
+            aria-checked="false"
+          >
+            Non-Profit Only
+          </button>
+          <button
+            class="toggle-btn"
+            data-filter="for-profit"
+            role="radio"
+            aria-checked="false"
+          >
+            For-Profit Only
+          </button>
+        </div>
+        <p class="filter-hint" aria-live="polite">Showing: <strong id="filter-status">All Facilities</strong></p>
+      </div>
+    </section>
+
+    <!-- Facility Listings -->
+    <section class="listings" aria-label="Care facility listings">
+      <div class="listing-grid" id="listing-grid">
+
+        <article class="listing-card" data-type="non-profit">
+          <div class="listing-badge non-profit">Non-Profit</div>
+          <h3>Sunrise Gardens Assisted Living</h3>
+          <p class="listing-type">Assisted Living</p>
+          <p class="listing-desc">A warm, community-focused residence offering personalized care plans, group activities, and 24-hour staff support.</p>
+          <p class="listing-location">123 Maple Avenue, Springfield</p>
+          <p class="listing-phone">Phone: <a href="tel:5551234567">(555) 123-4567</a></p>
+        </article>
+
+        <article class="listing-card" data-type="for-profit">
+          <div class="listing-badge for-profit">For-Profit</div>
+          <h3>Harmony Health Senior Living</h3>
+          <p class="listing-type">Assisted Living &amp; Memory Care</p>
+          <p class="listing-desc">Modern amenities with specialized memory care wings, restaurant-style dining, and on-site rehabilitation services.</p>
+          <p class="listing-location">456 Oak Boulevard, Springfield</p>
+          <p class="listing-phone">Phone: <a href="tel:5559876543">(555) 987-6543</a></p>
+        </article>
+
+        <article class="listing-card" data-type="non-profit">
+          <div class="listing-badge non-profit">Non-Profit</div>
+          <h3>Grace Community Care Center</h3>
+          <p class="listing-type">Skilled Nursing</p>
+          <p class="listing-desc">Faith-based skilled nursing facility providing compassionate around-the-clock medical care and rehabilitation therapy.</p>
+          <p class="listing-location">789 Elm Street, Riverside</p>
+          <p class="listing-phone">Phone: <a href="tel:5552345678">(555) 234-5678</a></p>
+        </article>
+
+        <article class="listing-card" data-type="for-profit">
+          <div class="listing-badge for-profit">For-Profit</div>
+          <h3>Premier Living at Lakewood</h3>
+          <p class="listing-type">Continuing Care Retirement Community</p>
+          <p class="listing-desc">Full-spectrum retirement campus featuring independent living, assisted living, and skilled nursing all in one location.</p>
+          <p class="listing-location">1010 Lakeshore Drive, Lakewood</p>
+          <p class="listing-phone">Phone: <a href="tel:5553456789">(555) 345-6789</a></p>
+        </article>
+
+        <article class="listing-card" data-type="non-profit">
+          <div class="listing-badge non-profit">Non-Profit</div>
+          <h3>Evergreen Memory Care Village</h3>
+          <p class="listing-type">Memory Care</p>
+          <p class="listing-desc">Purpose-built community for residents with dementia, featuring secured outdoor gardens and sensory-rich activities.</p>
+          <p class="listing-location">222 Pine Road, Hillcrest</p>
+          <p class="listing-phone">Phone: <a href="tel:5554567890">(555) 456-7890</a></p>
+        </article>
+
+        <article class="listing-card" data-type="for-profit">
+          <div class="listing-badge for-profit">For-Profit</div>
+          <h3>Comfort Care Residences</h3>
+          <p class="listing-type">Assisted Living</p>
+          <p class="listing-desc">Boutique assisted living with private suites, chef-prepared meals, and a dedicated activities coordinator.</p>
+          <p class="listing-location">333 Birch Lane, Meadowview</p>
+          <p class="listing-phone">Phone: <a href="tel:5555678901">(555) 567-8901</a></p>
+        </article>
+
+        <article class="listing-card" data-type="non-profit">
+          <div class="listing-badge non-profit">Non-Profit</div>
+          <h3>Valley View Skilled Nursing &amp; Rehab</h3>
+          <p class="listing-type">Skilled Nursing</p>
+          <p class="listing-desc">Community-supported facility specializing in post-hospital rehabilitation and long-term skilled nursing care.</p>
+          <p class="listing-location">444 Valley Road, Greendale</p>
+          <p class="listing-phone">Phone: <a href="tel:5556789012">(555) 678-9012</a></p>
+        </article>
+
+        <article class="listing-card" data-type="for-profit">
+          <div class="listing-badge for-profit">For-Profit</div>
+          <h3>Golden Years Senior Suites</h3>
+          <p class="listing-type">Assisted Living &amp; Memory Care</p>
+          <p class="listing-desc">Upscale senior living with dedicated memory care, a full-service salon, and weekly family engagement programs.</p>
+          <p class="listing-location">555 Sunset Terrace, Oakville</p>
+          <p class="listing-phone">Phone: <a href="tel:5557890123">(555) 789-0123</a></p>
+        </article>
+
+      </div>
+      <p class="no-results" id="no-results" hidden>No facilities match your current filter. Try selecting a different option above.</p>
+    </section>
+
+    <!-- Do Your Homework Section -->
+    <section class="homework-section" aria-label="Research guidance">
+      <h2>Do Your Homework Before You Choose</h2>
+      <p>
+        Choosing a care facility is one of the most important decisions you will make for yourself or your loved one.
+        We strongly encourage you to research any facility thoroughly before making a commitment.
+      </p>
+
+      <div class="homework-steps">
+        <div class="homework-step">
+          <span class="step-number" aria-hidden="true">1</span>
+          <div>
+            <h3>Check State Inspection Reports</h3>
+            <p>The <strong>State Department of Aging</strong> conducts regular inspections of all licensed care facilities.
+            Request the most recent inspection report for any facility you are considering.</p>
+          </div>
+        </div>
+        <div class="homework-step">
+          <span class="step-number" aria-hidden="true">2</span>
+          <div>
+            <h3>Visit in Person</h3>
+            <p>Schedule a tour at different times of day. Observe how staff interact with residents and whether the
+            environment feels welcoming and safe.</p>
+          </div>
+        </div>
+        <div class="homework-step">
+          <span class="step-number" aria-hidden="true">3</span>
+          <div>
+            <h3>Ask About Staff Ratios</h3>
+            <p>Find out how many caregivers are on duty during each shift. A lower resident-to-staff ratio generally
+            means more personalized attention.</p>
+          </div>
+        </div>
+        <div class="homework-step">
+          <span class="step-number" aria-hidden="true">4</span>
+          <div>
+            <h3>Understand the Costs</h3>
+            <p>Ask for a complete breakdown of fees. Find out what is included in the base rate and what costs extra.
+            Check if they accept Medicaid or offer financial assistance.</p>
+          </div>
+        </div>
+        <div class="homework-step">
+          <span class="step-number" aria-hidden="true">5</span>
+          <div>
+            <h3>Talk to Current Families</h3>
+            <p>Ask the facility to connect you with families of current residents. Their firsthand experience can
+            provide valuable insight.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="dept-aging-box">
+        <h3>Partner Resource: State Department of Aging</h3>
+        <p>
+          This navigator is provided in partnership with the <strong>State Department of Aging</strong>,
+          which oversees the licensing and regulation of senior care facilities statewide.
+          The Department of Aging offers the following free resources:
+        </p>
+        <ul>
+          <li>Facility inspection reports and compliance histories</li>
+          <li>A consumer complaint hotline: <a href="tel:5550001234"><strong>(555) 000-1234</strong></a></li>
+          <li>In-person counseling through local Area Agencies on Aging</li>
+          <li>A guide to understanding your rights as a resident or family member</li>
+        </ul>
+        <p class="disclaimer">
+          <em>Note: This is a proof of concept application. The State Department of Aging referenced here is
+          fictional and created for demonstration purposes. In a production version, this section would link
+          to your actual state's department of aging or equivalent regulatory body.</em>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Senior Care Navigator &mdash; Proof of Concept</p>
+    <p>Built in partnership with the State Department of Aging (fictional)</p>
+    <p>If you or someone you know needs immediate help, call <a href="tel:211"><strong>2-1-1</strong></a> for local assistance.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
